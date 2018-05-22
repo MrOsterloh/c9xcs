@@ -1,0 +1,25 @@
+<root>
+    <sourceType name="Status">
+        <ending>.xlsx</ending>
+        <tags>status</tags>
+        <entries>
+            <name>a1</name>
+            <hersteller>a2</hersteller>
+        </entries>
+    </sourceType>
+
+    <sourceType name="Messung">
+        <ending>.xlsx</ending>
+        <tags>messung,auswertung</tags>
+        <entries>
+            <name>b1</name>
+            <hersteller>b2</hersteller>
+        </entries>
+    </sourceType>
+
+    <data>
+        <name />
+        <hersteller />
+    </data>
+</root>
+
