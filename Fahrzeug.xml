@@ -3,8 +3,10 @@
         <ending>.xlsx</ending>
         <tags>status</tags>
         <entries>
-            <name>a1</name>
-            <hersteller>a2</hersteller>
+            <name>b6</name>
+            <hersteller>b1</hersteller>
+            <verbrauch>b4</verbrauch>
+            <reichweite>b6</reichweite>
         </entries>
     </sourceType>
 
@@ -18,8 +20,19 @@
     </sourceType>
 
     <data>
-        <name />
-        <hersteller />
+        <name>
+        </name>
+        <hersteller>
+            <keywords>vw, volkswagen, audi, bmw, alpha </keywords>
+        </hersteller>
+        <verbrauch>
+            <value>10-250</value>
+            <unit>Wh/km</unit>
+        </verbrauch>
+        <reichweite>
+            <value>0-999</value>
+            <unit>km</unit>
+        </reichweite>
     </data>
 </root>
 

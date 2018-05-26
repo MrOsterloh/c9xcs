@@ -12,6 +12,14 @@ import openpyxl
 import os
 
 
+class DataHandler(object):
+    def __init__(self):
+        pass
+
+    def setAttr(self, name, attribute):
+        setattr(self, name, float())
+
+
 class Main():
     xml_delimiter = ','
     xml_file = "Fahrzeug.xml"
@@ -19,26 +27,28 @@ class Main():
 
     def __init__(self):
         tree = ET.parse(self.xml_file)
-
         self.xml_root = tree.getroot()
 
+        dataHandler = DataHandler()
+        for data in self.xml_root.find('data'):
+            for datatype in data:
+                name = datatype.tag
+                print(name)
 
 
 
+        # self.file_checker(self.test_filepath)
         #
         # for child in self.xml_root:
         #     print(child.tag)
 
-        self.file_checker(self.test_filepath)
+
 
 
         # new_Fzg = ET.SubElement(root, "Fahrzeug", attrib={"id": "1"})
         # new_Fzg_name = ET.SubElement(new_Fzg, "name")
         # new_Fzg_name.text = "VW"
         #  tree.write(xml_file)
-
-
-
 
 
     def file_checker(self, filename):
@@ -75,10 +85,10 @@ class Main():
 
     def check_tags(self, source, filename):
         for tag in source.find('tags').text.split(self.xml_delimiter):
-            print(tag)
             if tag.lower() in filename.lower():
                 return True
         return False
+
 
 
 
