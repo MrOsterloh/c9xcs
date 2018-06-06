@@ -12,21 +12,22 @@ import sqlite3
 
 class SQLHandler():
     db_name = 'FahrzeugDB.db'
-    attributes = ['name', 'hersteller', 'edit']
+    attributes = ['name', 'path']
 
 
-    def __init__(self):
+    def __init__(self, parent):
+        self.parent = parent
         self.conn = sqlite3.connect(':memory:')
         self.c = self.conn.cursor()
 
         self.__colNames = list()
         self.__qHolder = str()
 
-        self.create_table(self.attributes)
+        # self.create_table(self.attributes)
 
     def create_table(self, attributes):
         with self.conn:
-            self.c.execute ("CREATE TABLE fahrzeuge (id INTEGER PRIMARY KEY)")
+            self.c.execute("CREATE TABLE fahrzeuge (id INTEGER PRIMARY KEY)")
             _type = 'TEXT'
             _default = ''
             for attribute in attributes:
