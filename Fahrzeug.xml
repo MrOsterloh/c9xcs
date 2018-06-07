@@ -11,7 +11,7 @@
     </sourceType>
 
     <sourceType name="Messung">
-        <ending>.xlsx</ending>
+        <ending>.xlsx, .xlsb</ending>
         <tags>messung,auswertung</tags>
         <entries>
             <name>b1</name>
@@ -19,20 +19,5 @@
         </entries>
     </sourceType>
 
-    <data>
-        <name>
-        </name>
-        <hersteller>
-            <keywords>vw, volkswagen, audi, bmw, alpha </keywords>
-        </hersteller>
-        <verbrauch>
-            <value>10-250</value>
-            <unit>Wh/km</unit>
-        </verbrauch>
-        <reichweite>
-            <value>0-999</value>
-            <unit>km</unit>
-        </reichweite>
-    </data>
 </root>
 
